@@ -1,7 +1,7 @@
 CREATE DATABASE colors;
 use colors;
 
-CREAT TABLE favorite_colors(
+CREATE TABLE favorite_colors(
     name VARCHAR(20),
     color VARCHAR(20)
 );
