@@ -2,6 +2,7 @@ from typing import List, Dict
 from flask import Flask
 import mysql.connector
 import json
+import os
 
 app = Flask(__name__)
 
@@ -9,7 +10,7 @@ app = Flask(__name__)
 def favorite_colors() -> List[Dict]:
     config = {
         'user': 'root',
-        'password': 'root',
+        'password': os.environ['MYSQL_USER_PASSWORD'],
         'host': 'db',
         'port': '3306',
         'database': 'colors'
